@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Value Example</title>
+</head>
+<body>
+    <!-- HTML element containing the value -->
+    <div id="content">
+        The value to retrieve: <span id="theValue">42</span>
+    </div>
+
+    <script>
+        // JavaScript code to retrieve the value and store in a variable
+        // Method 1: Using getElementById
+        var valueElement = document.getElementById('theValue');
+        var value = valueElement.innerText; // Get the inner text of the element
+
+        // Method 2: Using querySelector
+        // var valueElement = document.querySelector('#theValue');
+        // var value = valueElement.innerText;
+
+        console.log('Retrieved value:', value); // Output the retrieved value to console
+    </script>
+</body>
+</html>
