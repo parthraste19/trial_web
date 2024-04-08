@@ -3,25 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Get Value Example</title>
+    <title>Get Value from User</title>
 </head>
 <body>
-    <!-- HTML element containing the value -->
-    <div id="content">
-        The value to retrieve: <span id="theValue">42</span>
-    </div>
+    <label for="userInput">Enter a value:</label>
+    <input type="text" id="userInput">
+    <button onclick="storeValue()">Store Value</button>
 
     <script>
-        // JavaScript code to retrieve the value and store in a variable
-        // Method 1: Using getElementById
-        var valueElement = document.getElementById('theValue');
-        var value = valueElement.innerText; // Get the inner text of the element
+        function storeValue() {
+            // JavaScript function to get value from input field and store in a variable
+            var userInput = document.getElementById('userInput').value;
+            console.log("User input:", userInput);
 
-        // Method 2: Using querySelector
-        // var valueElement = document.querySelector('#theValue');
-        // var value = valueElement.innerText;
-
-        console.log('Retrieved value:', value); // Output the retrieved value to console
+            // You can now use 'userInput' variable for further processing or display
+            // For example, display the value in an alert
+            alert("You entered: " + userInput);
+        }
     </script>
 </body>
 </html>
